@@ -73,7 +73,7 @@ class FCMChannel
             
             $response = $httpClient->post("https://fcm.googleapis.com/v1/projects/$this->project/messages:send", ['json' => $message]);
 
-            event(new FCMNotificationSent($notifiable, $notification, $message, $response));
+            //event(new FCMNotificationSent($notifiable, $notification, $message, $response));
         }
     }
 }
